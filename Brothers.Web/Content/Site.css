@@ -1,0 +1,103 @@
+﻿body, html{ 
+    width:100%; 
+    height:100%; 
+    padding: 0;
+    margin: 0;
+    background-image: linear-gradient(black, grey);
+    font-family: Arial, Helvetica, sans-serif;}
+
+header{
+    width:100%; height: 70px;
+}
+
+table
+{
+    width: 100%;
+    height: 100%;
+}
+
+.centered {
+    text-align: center;
+}
+p {
+    color: white;
+}
+p span {
+    font-weight: bold;
+}
+
+.main {
+    color: white;
+    text-align:center; 
+    height: 100%;
+    width: 100%;
+
+}
+.footer {
+    border: 1px solid grey;
+    height:40px;
+    position:absolute;
+    bottom:0;
+    width:100%;
+    height:60px;   /* Height of the footer */
+    color: white;
+    background-color: grey;
+}
+.navbar-header {
+    font-family:  'Hoefler Text', Georgia, 'Times New Roman', serif;
+    font-weight: normal;
+    font-size: 1.75em;
+    letter-spacing: 1.2em;
+    line-height: 1.1em;
+    margin:0px;
+    text-align:center;
+    text-transform: uppercase;
+}
+
+div input {
+    margin-bottom: 10px;
+}
+
+input[type=email], input[type=password] {
+    width: 20%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    color: black;
+    margin-top:200px;
+    background-color:lightgray;
+}
+
+
+button {
+    background-color: black;
+    color: white;
+    padding: 10px 18px;
+    border: none;
+    cursor: pointer;
+    width: auto;
+    border-radius: 20px;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+.cancelbtn {
+    background-color: grey;
+    color: black;
+}
+a .fa {
+    color: white;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
+}

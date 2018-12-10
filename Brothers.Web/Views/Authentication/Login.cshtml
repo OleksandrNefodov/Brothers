@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+}
+
+<div class="main">
+    <form method="post" action="@Url.Action("LoginUser", "Authentication")" >
+
+        <div>              
+            <input type="email" placeholder="Email" name="uname" required>
+            <input type="password" placeholder="Password" name="psw" required>                                
+        </div>
+
+        <div>
+            <label>
+                <input type="checkbox" checked="checked" name="remember"> Remember me
+            </label>                
+        </div>
+
+        <div>
+            <button type="submit">Login</button>
+            <button type="button" class="cancelbtn">Cancel</button>                
+        </div>
+        <div>
+            <span class="psw">Forgot <a href="#">password?</a></span>
+        </div>
+
+    </form>
+</div>
+
+
