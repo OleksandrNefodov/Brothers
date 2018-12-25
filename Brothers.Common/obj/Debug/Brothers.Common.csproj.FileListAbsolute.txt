@@ -25,4 +25,3 @@ D:\CommonDevelopment\BrothersProjects\Brothers.Common\obj\Debug\Brothers.Common.
 D:\CommonDevelopment\BrothersProjects\Brothers.Common\obj\Debug\Brothers.Common.pdb
 D:\CommonDevelopment\BrothersProjects\Brothers.Common\obj\Debug\Brothers.Common.Migrations.BaseDbEntityChanged.resources
 D:\CommonDevelopment\BrothersProjects\Brothers.Common\obj\Debug\Brothers.Common.Migrations.AddedAlbum.resources
-D:\CommonDevelopment\BrothersProjects\Brothers.Common\obj\Debug\Brothers.Common.csprojResolveAssemblyReference.cache

@@ -73,6 +73,7 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ServiceMapping\Entities\AuthenticationView.cs" />
     <Compile Include="ServiceMapping\Entities\DisplayPhoto.cs" />
     <Compile Include="ServiceMapping\Transformations.cs" />
     <Compile Include="Services\AlbumService.cs" />

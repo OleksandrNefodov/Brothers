@@ -1,5 +1,5 @@
 ﻿@using Brothers.Repository.ServiceMapping.Entities
-
+@model DisplayPhoto
 @{
     ViewBag.Title = "Photos";
 }
@@ -21,8 +21,8 @@
                     <td>@photo.Type</td>
                     <td>@photo.Size</td>
                     <td>
-                        <a href="@Url.Action("DeleteAsync", "Photo", new {id = @photo.Id})"><i style="color: #DDDDDD;" class="fas fa-trash"></i></a>
-                        <a href="@Url.Action("GetAsync", "Photo", new {id = @photo.Id})"><i style="color: #DDDDDD;" class="fas fa-edit"></i></a>
+                        <a href="@Url.Action("DeleteAsync", "Photo", new {id = @photo.Identifier})"><i style="color: #DDDDDD;" class="fas fa-trash"></i></a>
+                        <a href="@Url.Action("GetAsync", "Photo", new {id = @photo.Identifier})"><i style="color: #DDDDDD;" class="fas fa-edit"></i></a>
                     </td>
                 </tr>
             }

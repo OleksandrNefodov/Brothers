@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@using System.Web.Optimization;
+<!DOCTYPE html>
 
 <html>
 <head>
@@ -9,6 +10,8 @@
     <link rel="stylesheet" href="../../Content/bootstrap.css">
     <link rel="stylesheet" href="../../Content/bootstrap.min.css">   
     <link rel="stylesheet" href="../../Content/Site.css">
+    <script src="/Scripts/jquery.validate.js"></script>
+    
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
 </head>
 <body>
@@ -32,7 +35,7 @@
                 </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="@Url.Action("Login", "Authentication")"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                <li><a href="@Url.Action("Authentication", "Authentication")"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
                 <li><a href="@Url.Action("Logout", "Authentication")"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
             </ul>
 
@@ -41,8 +44,13 @@
     <div>
         @RenderBody()
     </div>
-    <div class="footer centered">
-        <p>Copyright 2018. Website footer designed by brothers.</p>
-    </div>
+<div class="footer centered">
+    <p>Copyright 2018. Website footer designed by brothers.</p>
+</div>
+
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/jqueryval")
+@Scripts.Render("~/bundles/bootstrap")
+@RenderSection("scripts", required: false)
 </body>
 </html>

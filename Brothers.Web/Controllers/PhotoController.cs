@@ -7,10 +7,13 @@ using Brothers.Repository.PhotoService;
 using BrothersProjects.Extensions;
 using System.Web;
 using System.Threading.Tasks;
+using Brothers.Repository.ServiceMapping;
 using Brothers.Repository.ServiceMapping.Entities;
+using BrothersProjects.Filters;
 
 namespace BrothersProjects.Controllers
 {
+    [MyAuth]
     public class PhotoController : Controller
     {
         public string GetInfo()
@@ -73,9 +76,9 @@ namespace BrothersProjects.Controllers
         {
             List<Album> albums = await AlbumService.ListAlbumsAsync();
 
-            Photo photo = TempData["photo"] as Photo;
+            DisplayPhoto photo = TempData["photo"] as DisplayPhoto;
 
-            photo = photo ?? new Photo();
+            photo = photo ?? new DisplayPhoto();
 
             IEnumerable<SelectListItem> albumNames = albums.Select(album => new SelectListItem()
             {
@@ -93,14 +96,24 @@ namespace BrothersProjects.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult> Add(Photo photo, HttpPostedFileBase file)
+        public async Task<ActionResult> Add(DisplayPhoto displayPhoto, HttpPostedFileBase file)
         {
             if (file != null)
             {
-                photo.RawData = new byte[file.ContentLength];
+                displayPhoto.RawData = new byte[file.ContentLength];
 
-                file.InputStream.Read(photo.RawData, 0, file.ContentLength);
+                file.InputStream.Read(displayPhoto.RawData, 0, file.ContentLength);
             }
+
+            Photo photo = new Photo
+            {
+                Id = displayPhoto.Identifier,
+                Name = displayPhoto.Name,
+                Type = displayPhoto.Type,
+                AlbumId = displayPhoto.AlbumId,
+                Size = displayPhoto.Size,
+                RawData = displayPhoto.RawData
+            };
 
             await PhotoService.AddAsync(photo);
 
@@ -111,7 +124,9 @@ namespace BrothersProjects.Controllers
         {
             var photo = await PhotoService.GetAsync(id);
 
-            TempData["photo"] = photo;
+            var displayPhoto = new DisplayPhoto(photo);
+
+            TempData["photo"] = displayPhoto;
 
             return RedirectToAction("AddAndEdit");
         }

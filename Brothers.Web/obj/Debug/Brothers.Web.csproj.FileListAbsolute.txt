@@ -39,3 +39,6 @@ D:\CommonDevelopment\BrothersProjects\Brothers.Web\obj\Debug\BrothersProjects.dl
 D:\CommonDevelopment\BrothersProjects\Brothers.Web\obj\Debug\BrothersProjects.pdb
 D:\CommonDevelopment\BrothersProjects\Brothers.Web\bin\Brothers.Repository.dll
 D:\CommonDevelopment\BrothersProjects\Brothers.Web\bin\Brothers.Repository.pdb
+D:\CommonDevelopment\BrothersProjects\Brothers.Web\bin\System.Web.Optimization.dll
+D:\CommonDevelopment\BrothersProjects\Brothers.Web\bin\Antlr3.Runtime.dll
+D:\CommonDevelopment\BrothersProjects\Brothers.Web\bin\WebGrease.dll

@@ -1,5 +1,5 @@
-﻿@using Brothers.Common.Models;
-@model Photo
+﻿@using Brothers.Repository.ServiceMapping.Entities;
+@model DisplayPhoto
 @{
     ViewBag.Title = "AddAndEdit";
     string imgSrc = "";
@@ -22,7 +22,7 @@
         <h4>Add Photo</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-        @Html.HiddenFor(model => model.Id)
+        @Html.HiddenFor(model => model.Identifier)
 
         <div class="container">
             <div class="row">

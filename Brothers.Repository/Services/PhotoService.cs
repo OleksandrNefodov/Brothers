@@ -21,10 +21,11 @@ namespace Brothers.Repository.PhotoService
                     .Photos
                     .Select(photo => new DisplayPhoto
                         {
-                            Id = photo.Id,
+                            Identifier = photo.Id,
                             Size = photo.Size,
                             Name = photo.Name,
-                            Type = photo.Type.ToString()
+                            Type = photo.Type,
+                            AlbumId = photo.AlbumId
                         })
                     .ToListAsync();
 
